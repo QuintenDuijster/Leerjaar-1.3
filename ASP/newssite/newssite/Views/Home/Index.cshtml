@@ -5,15 +5,15 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <section>mijn nieuwe html code</section>
 
     @{
-        foreach(NewsItem item in Model){
-        <section>@item.Title </section>
-        <section>@item.Content</section>
-        <img src="@item.ImageUrl">
+        foreach (NewsItem item in Model)
+        {
+            <section>@item.Title </section>
+            <section>@item.Content</section>
+            <img src="@item.ImageUrl">
         }
     }
-
-
 </div>
+
+
