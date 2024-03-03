@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using newssite.DbData;
 using newssite.Models;
 using System.Diagnostics;
 using System.Text.Json;
@@ -11,12 +12,11 @@ namespace newssite.Controllers
 
         private List<NewsItem> newsItems = new List<NewsItem>();
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, NewsDataContext newsDataContext)
         {
             _logger = logger;
 
-            string json = System.IO.File.ReadAllText("data/news.json");
-            newsItems = JsonSerializer.Deserialize<List<NewsItem>>(json);
+            newsItems = newsDataContext.GetNews();
         }
 
         public IActionResult Index()
