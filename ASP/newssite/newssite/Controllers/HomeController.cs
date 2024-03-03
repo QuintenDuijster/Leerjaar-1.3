@@ -29,6 +29,11 @@ namespace newssite.Controllers
             return View();
         }
 
+        public IActionResult Games()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
