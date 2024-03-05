@@ -1,0 +1,41 @@
+﻿@{
+	ViewData["Title"] = "Editor Page";
+}
+
+@{
+	if (Model != null)
+	{
+		if (Model.Result != null)
+		{
+			NewsItem item = Model.Result;
+			<section>
+				<h1>@item.Title</h1>
+				<p>@item.Content</p>
+				<figure><img src="@item.ImageUrl" /></figure>
+			</section>
+		}
+		else if(Model.Error != null)
+		{
+			<section>
+				<h2>@Model.Error</h2>
+			</section>
+		}
+	}
+}
+
+<form action="Editor" method="post">
+	<ul>
+		<li>
+			<label for="Title">Title:</label><input type="text" name="title" /><br>
+		</li>
+		<li>
+			<label for="Content">Content:</label><input type="text" name="content" /><br>
+		</li>
+		<li>
+			<label for="ImageUrl">ImageUrl:</label><input type="text" name="imageUrl" /><br>
+		</li>
+		<li>
+			<input type="submit" value="post news" />
+		</li>
+	</ul>
+</form>
