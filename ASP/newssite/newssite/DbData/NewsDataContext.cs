@@ -13,16 +13,21 @@ namespace newssite.DbData
             string folder = new FileInfo(location).Directory.FullName;
             DbPath = Path.Join(folder, "newssite.db");
 
+            /*
             if (CreateDatabaseIfNotExists())
             {
-                NewsItem newsItem = new NewsItem() 
-                { 
-                    Title = "Initeel bericht",
-                    Content = "Initeel bericht werdt gepost om: ",
-                    ImageUrl = "img/newsitem.PNG" 
-                };
+
                 AddNews(newsItem);
+
             }
+            */
+            NewsItem newsItem = new NewsItem()
+            {
+                Title = "Initeel bericht",
+                Content = "Initeel bericht werdt gepost om: ",
+                ImageUrl = "img/newsitem.PNG"
+            };
+            AddNews(newsItem);
         }
 
         private bool CreateDatabaseIfNotExists()
@@ -60,7 +65,7 @@ namespace newssite.DbData
                 SqliteCommand command = connection.CreateCommand();
                 command.CommandText =
                 @"
-                    INSERT INTO News (title,centent,imageUrl)
+                    INSERT INTO News (title,content,imageUrl)
                     VALUES (@title, @content, @imageUrl);
                 ";
 

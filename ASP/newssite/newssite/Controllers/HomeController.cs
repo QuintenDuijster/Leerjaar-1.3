@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using newssite.DbData;
 using newssite.Models;
 using System.Diagnostics;
-using System.Text.Json;
 
 namespace newssite.Controllers
 {
