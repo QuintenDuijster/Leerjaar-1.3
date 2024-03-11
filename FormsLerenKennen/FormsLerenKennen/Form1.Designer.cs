@@ -29,83 +29,63 @@
 		private void InitializeComponent()
 		{
 			components = new System.ComponentModel.Container();
-			Label1 = new Label();
-			LoginBox = new TextBox();
-			PasswordBox = new TextBox();
-			label2 = new Label();
-			label3 = new Label();
 			errorProvider1 = new ErrorProvider(components);
-			LoginButton = new Button();
+			button1 = new Button();
+			label1 = new Label();
+			textBox1 = new TextBox();
+			listBox1 = new ListBox();
 			((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
 			SuspendLayout();
-			// 
-			// Label1
-			// 
-			Label1.AutoSize = true;
-			Label1.Location = new Point(278, 74);
-			Label1.Name = "Label1";
-			Label1.Size = new Size(186, 20);
-			Label1.TabIndex = 0;
-			Label1.Text = "Welcome to this aplication";
-			Label1.Click += label1_Click;
-			// 
-			// LoginBox
-			// 
-			LoginBox.Location = new Point(310, 160);
-			LoginBox.Name = "LoginBox";
-			LoginBox.Size = new Size(125, 27);
-			LoginBox.TabIndex = 1;
-			// 
-			// PasswordBox
-			// 
-			PasswordBox.Location = new Point(310, 248);
-			PasswordBox.Name = "PasswordBox";
-			PasswordBox.Size = new Size(125, 27);
-			PasswordBox.TabIndex = 2;
-			PasswordBox.TextChanged += textBox2_TextChanged;
-			// 
-			// label2
-			// 
-			label2.AutoSize = true;
-			label2.Location = new Point(342, 137);
-			label2.Name = "label2";
-			label2.Size = new Size(49, 20);
-			label2.TabIndex = 3;
-			label2.Text = "Name";
-			// 
-			// label3
-			// 
-			label3.AutoSize = true;
-			label3.Location = new Point(333, 225);
-			label3.Name = "label3";
-			label3.Size = new Size(70, 20);
-			label3.TabIndex = 4;
-			label3.Text = "Password";
 			// 
 			// errorProvider1
 			// 
 			errorProvider1.ContainerControl = this;
 			// 
-			// LoginButton
+			// button1
 			// 
-			LoginButton.Location = new Point(323, 299);
-			LoginButton.Name = "LoginButton";
-			LoginButton.Size = new Size(94, 29);
-			LoginButton.TabIndex = 5;
-			LoginButton.Text = "Login";
-			LoginButton.UseVisualStyleBackColor = true;
+			button1.Location = new Point(138, 121);
+			button1.Name = "button1";
+			button1.Size = new Size(170, 29);
+			button1.TabIndex = 0;
+			button1.Text = "voeg item toe";
+			button1.UseVisualStyleBackColor = true;
+			button1.Click += button1_Click;
+			// 
+			// label1
+			// 
+			label1.AutoSize = true;
+			label1.Location = new Point(369, 76);
+			label1.Name = "label1";
+			label1.Size = new Size(50, 20);
+			label1.TabIndex = 1;
+			label1.Text = "label1";
+			label1.Click += label1_Click_1;
+			// 
+			// textBox1
+			// 
+			textBox1.Location = new Point(138, 73);
+			textBox1.Name = "textBox1";
+			textBox1.Size = new Size(170, 27);
+			textBox1.TabIndex = 2;
+			textBox1.TextChanged += textBox1_TextChanged;
+			// 
+			// listBox1
+			// 
+			listBox1.FormattingEnabled = true;
+			listBox1.Location = new Point(138, 166);
+			listBox1.Name = "listBox1";
+			listBox1.Size = new Size(170, 164);
+			listBox1.TabIndex = 4;
 			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
-			Controls.Add(LoginButton);
-			Controls.Add(label3);
-			Controls.Add(label2);
-			Controls.Add(PasswordBox);
-			Controls.Add(LoginBox);
-			Controls.Add(Label1);
+			Controls.Add(listBox1);
+			Controls.Add(textBox1);
+			Controls.Add(label1);
+			Controls.Add(button1);
 			Name = "Form1";
 			Text = "Form1";
 			((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
@@ -114,13 +94,10 @@
 		}
 
 		#endregion
-
-		private Label Label1;
-		private TextBox LoginBox;
-		private TextBox PasswordBox;
-		private Label label2;
-		private Label label3;
 		private ErrorProvider errorProvider1;
-		private Button LoginButton;
+		private TextBox textBox1;
+		private Label label1;
+		private Button button1;
+		private ListBox listBox1;
 	}
 }
